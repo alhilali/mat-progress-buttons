@@ -1,17 +1,22 @@
-<button mat-button
-  [color]="options.buttonColor" 
+<button
+  mat-button
+  [color]="options.buttonColor"
   [class.active]="options.active"
   [class.mat-raised-button]="options.raised"
   [class.mat-stroked-button]="options.stroked"
-  [disabled]="options.active || options.disabled">
+  [class.mat-flat-button]="options.flat"
+  [disabled]="options.active || options.disabled"
+>
+  <mat-icon *ngIf="options.iconName" [color]="options.iconColor">{{ options.iconName }}</mat-icon>
 
   <span>{{ options.text }}</span>
 
   <mat-progress-bar
     class="bar"
     *ngIf="options.active && !options.disabled"
-    [color]="options.barColor" 
+    [color]="options.barColor"
     [mode]="options.mode"
-    [value]="options.value">
+    [value]="options.value"
+  >
   </mat-progress-bar>
 </button>

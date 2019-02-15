@@ -1,22 +1,26 @@
-<button mat-button 
-  [color]="options.buttonColor"     
+<button
+  mat-button
+  [color]="options.buttonColor"
   [class.active]="options.active"
   [class.fullWidth]="options.fullWidth"
   [class.mat-raised-button]="options.raised"
   [class.mat-stroked-button]="options.stroked"
-  [disabled]="options.disabled">
+  [class.mat-flat-button]="options.flat"
+  [disabled]="options.disabled"
+>
+  <mat-icon *ngIf="options.iconName" [color]="options.iconColor">{{ options.iconName }}</mat-icon>
 
-  <span
-    class="button-text" 
-    [class.active]="options.active">
+  <span class="button-text" [class.active]="options.active">
     {{ options.text }}
   </span>
 
-  <mat-spinner class="spinner" 
+  <mat-spinner
+    class="spinner"
     [diameter]="options.spinnerSize"
-    [color]="options.spinnerColor" 
+    [color]="options.spinnerColor"
     [mode]="options.mode"
     [value]="options.value"
-    [class.active]="options.active">
+    [class.active]="options.active"
+  >
   </mat-spinner>
 </button>
