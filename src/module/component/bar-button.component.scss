@@ -2,7 +2,11 @@ button.active {
   cursor: not-allowed;
 }
 .bar {
-  position:absolute;
+  position: absolute;
   top: 0px;
   left: 0px;
+}
+
+button.fullWidth {
+  width: 100%;
 }
